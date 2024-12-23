@@ -6,8 +6,7 @@ vim.loader.enable()
 
 -- Personal Config and LazyVim global options
 go.lualine_info_extras = false
-go.lazyvim_statuscolumn.folds_open = true
-go.lazyvim_statuscolumn.folds_githl = true
+go.codeium_cmp_hide = false
 go.lazygit_config = false
 
 -- Define leader key

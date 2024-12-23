@@ -1,9 +1,9 @@
 return {
-  { import = "lazyvim.plugins.extras.ui.dashboard" },
-  {
-    "nvimdev/dashboard-nvim",
-    opts = function(_, opts)
-      local logo = [[
+  "folke/snacks.nvim",
+  opts = {
+    dashboard = {
+      preset = {
+        header = [[
                                                                    
       ████ ██████           █████      ██                    
      ███████████             █████                            
@@ -12,11 +12,24 @@ return {
    █████████ ██████████ █████████ █████ █████ ████ █████  
  ███████████ ███    ███ █████████ █████ █████ ████ █████ 
 ██████  █████████████████████ ████ █████ █████ ████ ██████
-      ]]
-
-      logo = string.rep("\n", 8) .. logo .. "\n\n"
-      opts.config.header = vim.split(logo, "\n")
-      return opts
-    end,
+        ]],
+      },
+    },
+    lazygit = {
+      configure = false,
+    },
+    notifier = {
+      style = "fancy",
+    },
+    terminal = {
+      win = {
+        position = "float",
+      },
+    },
+    scroll = {
+      animate = {
+        duration = { step = 20, total = 150 },
+      },
+    },
   },
 }
